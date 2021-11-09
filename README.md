@@ -15,4 +15,4 @@ Step 12: Once everything is tested, then select the option as "D/d" to destroy t
 
 Please follow the above step and execute the scripts.
 
-Note: Incase any error occured, please reach me at "730517@cognizant.com"
+Note: Incase any error occured, please reach me at "debojyoti.bose@cognizant.com"
