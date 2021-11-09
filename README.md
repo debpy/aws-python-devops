@@ -1,5 +1,4 @@
 Please Follow the below steps to provision the ECS Cluster under the Application Load Balancer.
-
 Step 1: Provision EC2 server / use your own python IDE
 Step 2: Attach the IAM role into your EC2 machine (or) configure the Access and Secret key in your machine to use the AWS account.
 Step 3: Intall the Python3 and Pip3 in your machine.
@@ -12,7 +11,6 @@ Step 9: Select the option as "C/c" to create the complete setup inside your acco
 Step 10: Now, we can access the Webserver using the LoadBalancer DNS name.
 Step 11: If you want, you can update the service with updated image.Once image updated, first use the option "b/B" and then use the option as "C/c" to update the ECS Service.
 Step 12: Once everything is tested, then select the option as "D/d" to destroy the complete setup.
-
 Please follow the above step and execute the scripts.
 
 Note: Incase any error occured, please reach me at "debojyoti.bose@cognizant.com"
