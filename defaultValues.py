@@ -1,6 +1,6 @@
 import boto3
 
-default_region_name = "ap-south-1"
+default_region_name = "us-east-2"
 
 sts_client = boto3.client(service_name="sts", region_name=default_region_name)
 ec2_client = boto3.client(service_name="ec2", region_name=default_region_name)
@@ -16,3 +16,5 @@ def get_default_values():
     for each in subnets['Subnets']:
         subnet_ids.append(each['SubnetId'])
     return account_id, subnet_ids, default_vpc_id
+
+get_default_values()

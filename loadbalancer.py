@@ -4,7 +4,7 @@ from defaultValues import get_default_values
 from iam_role_and_sg import *
 
 
-default_region_name = "ap-south-1"
+default_region_name = "us-east-2"
 
 
 elb_client = boto3.client(service_name="elbv2", region_name=default_region_name)

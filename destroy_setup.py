@@ -3,7 +3,7 @@ from termcolor import colored
 from botocore.exceptions import ClientError
 
 
-default_region_name = "ap-south-1"
+default_region_name = "us-east-2"
 
 
 iam_client = boto3.client(service_name='iam', region_name=default_region_name)

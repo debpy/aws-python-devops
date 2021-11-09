@@ -8,7 +8,7 @@ from defaultValues import get_default_values
 from destroy_setup import delete_load_balancer, delete_target_group, delete_ecs_service
 
 
-default_region_name = "ap-south-1"
+default_region_name = "us-east-2"
 
 
 iam_client = boto3.client(service_name='iam', region_name=default_region_name)

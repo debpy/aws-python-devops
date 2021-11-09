@@ -8,7 +8,7 @@ from iam_role_and_sg import security_groups_checks, iam_role_creations
 from loadbalancer import attach_target_with_lb
 
 
-default_region_name = "ap-south-1"
+default_region_name = "us-east-2"
 
 
 ecs_client = boto3.client(service_name='ecs', region_name=default_region_name)
@@ -97,7 +97,7 @@ def ecs_service(sg_groupId, lb_tg_arn):
     waiter.wait(cluster=cluster_name,services=[service_name])
     print(colored(f"ECS Service ({service_name}) for the cluster ({cluster_name}) has been created", "green"))
 
-
+'''
 def ecs_service_update():
     sg_groupId = []
     if not ec2_client.describe_security_groups(Filters=[{'Name':'group-name','Values': [security_group_name]}])['SecurityGroups']:
@@ -129,7 +129,7 @@ def ecs_service_update():
                 forceNewDeployment=True
             )
             print(colored("ECS Service update request has been placed", "green"))
-
+'''
 
 def launch_ecs_cluster():
     global sg_groupId

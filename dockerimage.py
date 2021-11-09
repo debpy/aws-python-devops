@@ -4,7 +4,7 @@ import base64
 from termcolor import colored
 
 
-default_region_name = "ap-south-1"
+default_region_name = "us-east-2"
 
 
 docker_client = docker.from_env(version='1.24')
@@ -42,15 +42,15 @@ def ecr_repo_login():
     token = ecr_client.get_authorization_token()
     username, password = base64.b64decode(token['authorizationData'][0]['authorizationToken']).decode().split(':')
     registry = token['authorizationData'][0]['proxyEndpoint']
-    print("Username:", username, "Password:", password, "Registry:", registry)
     docker_client.login(username, password, registry=registry)
     return repo_uri 
 
 
 def docker_image_build():
     repository_url = ecr_repo_login()
-    #build = docker_client.images.build(path="/home/ec2-user/microcredentials/mcp/dockerimage/", tag=repository_url)
-    build = docker_client.images.build(path="/root/SkillUp/", tag=repository_url)
+   # build = docker_client.images.build(path="/home/ec2-user/microcredentials/mcp/dockerimage/", tag=repository_url)
+    build = docker_client.images.build(path="/root/SkillUp/aws-python-devops", tag=repository_url)
+    print(colored(f"Successfully Created the Docker image ({build[0]})", "green"))
     return repository_url
 
 
